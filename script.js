@@ -6,26 +6,41 @@ const email = document.querySelector(".email");
 const password = document.querySelector(".password");
 const btn = document.querySelector(".subscribe");
 
-const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const namePattern = /([A-Z])\w+/g;
+const passPattern = /^[a-zA-Z0-9]*$/gm;
 
 const allInputs = [fname, lname, email, password];
+console.log(allInputs);
 
 let inputValue = "";
 
-allInputs.forEach(
-  btn.addEventListener("click", function validation(i) {
-    inputValue = email.value;
-
-    if (inputValue.match(pattern)) {
-      // form.classList.add("valid");
-      // form.classList.remove("invalid");
-
-      i.style.border = "2px solid green";
-    } else {
-      // form.classList.remove("valid");
-      // form.classList.add("invalid");
-
-      i.style.border = "2px solid red";
+btn.addEventListener("click", function (e) {
+  e.preventDefault();
+  allInputs.forEach(function (i) {
+    const value = i.value;
+    const siblings = i.nextElementSibling;
+    if (i === email) {
+      if (value.match(namePattern)) {
+        i.style.border = "2px solid green";
+      } else {
+        i.style.border = "2px solid red";
+        siblings.classList.remove("hidden");
+      }
+    } else if (i === fname || i == lname) {
+      if (value.match(namePattern)) {
+        i.style.border = "2px solid green";
+      } else {
+        i.style.border = "2px solid red";
+        siblings.classList.remove("hidden");
+      }
+    } else if (i === password) {
+      if (value.match(passPattern) && value.match("")) {
+        i.style.border = "2px solid green";
+      } else {
+        i.style.border = "2px solid red";
+        siblings.classList.remove("hidden");
+      }
     }
-  })
-);
+  });
+});
