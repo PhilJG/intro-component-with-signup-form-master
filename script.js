@@ -34,13 +34,13 @@ btn.addEventListener("click", function (e) {
         i.style.border = "2px solid red";
         siblings.classList.remove("hidden");
       }
-    } else if (i === password) {
-      if (value.match(passPattern) && value.match("")) {
-        i.style.border = "2px solid green";
-      } else {
-        i.style.border = "2px solid red";
-        siblings.classList.remove("hidden");
-      }
+      // } else if (i === password) {
+      //   if (value.match(passPattern) && value.match("")) {
+      //     i.style.border = "2px solid green";
+      //   } else {
+      //     i.style.border = "2px solid red";
+      //     siblings.classList.remove("hidden");
+      //   }
     }
   });
 });
