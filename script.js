@@ -21,7 +21,7 @@ btn.addEventListener("click", function (e) {
     const value = i.value;
     const siblings = i.nextElementSibling;
     if (i === email) {
-      if (value.match(namePattern)) {
+      if (value.match(emailPattern)) {
         i.style.border = "2px solid green";
       } else {
         i.style.border = "2px solid red";
@@ -34,13 +34,13 @@ btn.addEventListener("click", function (e) {
         i.style.border = "2px solid red";
         siblings.classList.remove("hidden");
       }
-      // } else if (i === password) {
-      //   if (value.match(passPattern) && value.match("")) {
-      //     i.style.border = "2px solid green";
-      //   } else {
-      //     i.style.border = "2px solid red";
-      //     siblings.classList.remove("hidden");
-      //   }
+    } else if (i === password) {
+      if (value.match(passPattern)) {
+        i.style.border = "2px solid green";
+      } else {
+        i.style.border = "2px solid red";
+        siblings.classList.remove("hidden");
+      }
     }
   });
 });

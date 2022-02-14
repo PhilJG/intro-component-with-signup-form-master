@@ -117,11 +117,14 @@ button {
   border: none;
   color: white;
   cursor: pointer;
+  box-shadow: var(--box-shadow);
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
 }
 
 .terms {
   margin: 15px;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   font-weight: 500;
   color: var(--grayish-blue);
   text-align: center;
@@ -131,6 +134,14 @@ a {
   color: var(--red);
   text-decoration: none;
   font-weight: 700;
+}
+
+.subscribe {
+  box-shadow: hsl(154, 58%, 24%);
+}
+
+.subscribe:hover {
+  background-color: hsl(154, 59%, 51%, .7);
 }
 
 @media (min-width: 650px) {
