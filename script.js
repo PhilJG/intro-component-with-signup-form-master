@@ -8,7 +8,7 @@ const btn = document.querySelector(".subscribe");
 
 const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 const namePattern = /([A-Z])\w+/g;
-const passPattern = /^[a-zA-Z0-9]*$/gm;
+const passPattern = /^[a-zA-Z0-9]*$/g;
 
 const allInputs = [fname, lname, email, password];
 console.log(allInputs);
