@@ -30,6 +30,7 @@ Users should be able to:
 
 ![Desktop](./complete/complete-desktop.png)
 ![Mobile](./complete/complete-mobile.png)
+![Active](./complete/complete-active.png)
 
 ### Links
 
