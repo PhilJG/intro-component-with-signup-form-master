@@ -8,7 +8,7 @@ const btn = document.querySelector(".subscribe");
 
 const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 const namePattern = /([A-Z])\w+/g;
-const passPattern = /^[a-zA-Z0-9]*$/g;
+const passPattern = /[a-zA-Z0-9]/g;
 
 const allInputs = [fname, lname, email, password];
 console.log(allInputs);
@@ -37,6 +37,8 @@ btn.addEventListener("click", function (e) {
     } else if (i === password) {
       if (value.match(passPattern)) {
         i.style.border = "2px solid green";
+        console.log(value);
+        console.log(passPattern);
       } else {
         i.style.border = "2px solid red";
         siblings.classList.remove("hidden");
